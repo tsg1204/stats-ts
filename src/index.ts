@@ -8,4 +8,4 @@ const matches = fs.readFileSync('football.csv', {
   return row.split(',');
 })
 
-console.log(matches)
+console.log(matches);
