@@ -13,6 +13,10 @@ export class Summary {
     public analyzer: Analyzer, 
     public outputTarget: OutputTarget
   ) {}
+
+  buildAndPrintReport(matches: MatchData[]): void {
+    const output = this.analyzer.run(matches);
+    this.outputTarget.print(output);
+  }
 }
 
-new Summary(new WinsAnalysis() , new ConsoleReport());
